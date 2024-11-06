@@ -1,0 +1,681 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <!-- google font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- splide css -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css">
+
+  <link href="./asset/css/main.css" rel="stylesheet">
+
+  <!-- tailwinds cdn -->
+  <!-- <script src="https://cdn.tailwindcss.com"></script> -->
+  <script>
+    tailwind.config = {
+      theme: {
+        container: {
+          center: true,
+          padding: '1rem'
+        },
+        extend: {
+          colors: {
+            clifford: '#da373d',
+          }
+        }
+      }
+    }
+  </script>
+</head>
+
+<body class="font-[Poppins] bg-black">
+  <!-- header start -->
+  <header class="relative h-[750px] pt-[30px] before:absolute before:content-[''] before:top-0 before:left-0 before:size-full before:bg-gradient-to-r from-black to-black/10 before:-z-10">
+    <div class="absolute top-0 left-0 right-0 bottom-0 -z-20">
+      <img class="size-full object-cover" src="./asset/modern-architecture-shapes-futuristic-cityscape-reflecting-travel-innovation-generative-ai 2.png" alt="bg-image">
+    </div>
+    <!-- navbar start -->
+    <div class="max-w-screen-xl px-6 lg:px-[75px] mx-auto">
+      <nav class="flex flex-col lg:flex-row lg:justify-between lg:items-center bg-[#141414] text-white rounded-[20px] px-[30px] py-[24px] mb-[100px]">
+        <div class="flex justify-between items-center">
+          <a href="/" class="logo">
+            <img src="./asset/logo.svg" alt="logo" />
+          </a>
+          <button id="toggle-menu" class="px-6 py-3 bg-[#FF9357] lg:hidden">menu</button>
+        </div>
+        <ul class="hidden lg:flex gap-6 items-center">
+          <li><a href="/" class="font-semibold text-[16px]">Fetured</a></li>
+          <li><a href="/" class="font-semibold text-[16px]">Categories</a></li>
+          <li><a href="/" class="font-semibold text-[16px]">Testimonials</a></li>
+          <li><a href="/" class="font-semibold text-[16px]">About</a></li>
+        </ul>
+        <div class="hidden lg:flex lg:gap-2">
+          <a href="/" class="text-[16px] font-semibold inline-block px-[24px] py-[12px] bg-[#323437] rounded-full">Sign In</a>
+          <a href="/" class="text-[16px] font-semibold inline-block px-[24px] py-[12px] bg-[#FF9357] rounded-full">Sign Up</a>
+        </div>
+
+        <!-- navbar mobile start -->
+        <div id="nav-mobile" class="hidden flex flex-col gap-y-4 pt-[30px]">
+          <ul class="flex flex-col gap-2">
+            <li><a href="/" class="font-semibold text-[16px]">Fetured</a></li>
+            <li><a href="/" class="font-semibold text-[16px]">Categories</a></li>
+            <li><a href="/" class="font-semibold text-[16px]">Testimonials</a></li>
+            <li><a href="/" class="font-semibold text-[16px]">About</a></li>
+          </ul>
+          <div class="flex gap-2">
+            <a href="/" class="text-[16px] font-semibold inline-block px-[24px] py-[12px] bg-[#323437] rounded-full">Sign In</a>
+            <a href="/" class="text-[16px] font-semibold inline-block px-[24px] py-[12px] bg-[#FF9357] rounded-full">Sign Up</a>
+          </div>
+        </div>
+        <!-- navbar mobile ends -->
+      </nav>
+    </div>
+    <!-- navbar ends -->
+
+    <!-- content start -->
+    <div class="max-w-screen-xl px-6 lg:px-[75px] mx-auto">
+      <div class="max-w-[555px]">
+        <div class="text-white space-y-[25px] mb-[25px] md:space-y-[50px] md:mb-[50px]">
+          <h1 class="text-4xl md:text-5xl lg:text-[55px] font-bold">Find Glorious Living And Loving Space</h1>
+          <p class="lg:max-w-[400px] font-normal text-[18px] leading-[32x]">Dolor house comfortable si amet with cheap price that also lorem when you need grow.</p>
+        </div>
+
+        <form class="flex">
+          <input class="bg-[#141414] md:w-[400px] focus:outline-none placeholder:text-[#A8A8A8] placeholder:text-[13px] md:placeholder:text-[20px] rounded-l-full px-[20px] py-[15px] md:py-[20px] md:px-[30px]" type="search" name="" id="" placeholder="Seacrh by City or Country...">
+          <button type="submit" class="bg-[#FF9357] rounded-r-full text-[#010101] px-[20px] py-[10px] md:px-[40px] md:py-[20px] text-[13px] md:text-[20px] font-semibold">Explore</button>
+        </form>
+      </div>
+    </div>
+    <!-- content ends -->
+
+    <div class="absolute max-w-full lg:w-[1130px] z-10 left-[50%] -translate-x-[50%] -translate-y-[50%] top-[100%]">
+      <div class="lg:flex lg:justify-evenly bg-[#141414] rounded-[20px] py-[12px] lg:py-[24px] mx-[16px] lg:mx-0 divide-x divide-[#353535]">
+        <div class="flex gap-[16px]">
+          <div class="size-[70px] rounded-full bg-[#FF9357] flex justify-center items-center">
+            <img src="./asset/house-2.svg" alt="house">
+          </div>
+          <div>
+            <h3 class="font-bold text-[28px] text-white">382M</h3>
+            <h4 class="text-[#A8A8A8] text-[16px] font-reguler">Kost Available</h4>
+          </div>
+        </div>
+        <div class="flex gap-[16px] lg:ps-[50px]">
+          <div class="size-[70px] rounded-full bg-[#FF9357] flex justify-center items-center">
+            <img src="./asset/profile-2user.svg" alt="house">
+          </div>
+          <div>
+            <h3 class="font-bold text-[28px] text-white">9/10</h3>
+            <h4 class="text-[#A8A8A8] text-[16px] font-reguler">People Happy</h4>
+          </div>
+        </div>
+        <div class="flex gap-[16px] lg:ps-[50px]">
+          <div class="size-[70px] rounded-full bg-[#FF9357] flex justify-center items-center">
+            <img src="./asset/security-user.svg" alt="house">
+          </div>
+          <div>
+            <h3 class="font-bold text-[28px] text-white">100%</h3>
+            <h4 class="text-[#A8A8A8] text-[16px] font-reguler">Hight Security</h4>
+          </div>
+        </div>
+        <div class="flex gap-[16px] lg:ps-[50px]">
+          <div class="size-[70px] rounded-full bg-[#FF9357] flex justify-center items-center">
+            <img src="./asset/global.svg" alt="house">
+          </div>
+          <div>
+            <h3 class="font-bold text-[28px] text-white">138</h3>
+            <h4 class="text-[#A8A8A8] text-[16px] font-reguler">Countries</h4>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <!-- header ends -->
+
+  <main>
+
+    <!-- latest deals start -->
+    <section class="py-[100px]">
+      <div class="max-w-screen-xl mx-auto px-[12px] md:px-[20px] lg:px-[75px]">
+        <header class="text-center">
+          <h2 class="text-[28px] font-bold text-white">Our Latest Deals</h2>
+          <p class="text-[#A8A8A8] text-[18px] font-normal">Explore the beauty of architecture and living love</p>
+        </header>
+
+        <div class="splide mt-[30px]" role="group" aria-label="Splide Basic HTML Example">
+          <!-- arrows -->
+          <div class="splide__arrows">
+            <button class="splide__arrow size-[50px] top-24 -left-6 bg-[#141414] splide__arrow--prev">
+              <img class="rotate-180" src="./asset/arrow-left.svg" alt="arrows">
+            </button>
+            <button class="splide__arrow splide__arrow--next size-[50px] top-24 -right-6 bg-[#141414]">
+              <img src="./asset/arrow-left.svg" alt="arrows">
+            </button>
+          </div>
+          <div class="splide__track">
+            <ul class="splide__list">
+              <li class="splide__slide">
+                <article class="relative rounded-[24px] overflow-hidden before:absolute before:content-[''] before:top-0 before:left-0 before:right-0 before:bottom-0  
+                before:bg-gradient-to-b before:from-transparent before:via-white/30 before:via-48% before:to-[#050211] before:to-87% before:z-20">
+                  <!-- <div class="absolute left-0 top-0 size-full bg-[#d9d9d9] -z-10 rounded-[24px]"></div> -->
+                  <img class="object-cover rounded-[24px]" src="./asset/img/image-2.png" alt="rumah">
+                  <div class="absolute left-0 bottom-0 right-0 z-20 p-[20px] space-y-[14px] text-white">
+                    <div class="flex justify-between items-center ">
+                      <div class="">
+                        <h3 class="text-[20px] font-bold">De Flecce</h3>
+                        <h4 class="text-[14px]">$47,298/mo</h4>
+                      </div>
+                      <div class="flex">
+                        <img src="./asset/Star-4.svg" alt="star">
+                        <p class="text-[14px] font-normal">4.5/5</p>
+                      </div>
+                    </div>
+                    <div class="flex justify-between items-center">
+                      <div class="flex gap-1 items-center">
+                        <img src="./asset/format-square.svg" alt="square">
+                        <p class="text-[14px] font-normal">529 sqft</p>
+                      </div>
+                      <div class="flex gap-1 items-center">
+                        <img src="./asset/profile-white.svg" alt="user">
+                        <p class="text-[14px] font-normal">3</p>
+                      </div>
+                      <div class="flex gap-1 items-center">
+                        <img src="./asset/wifi.svg" alt="wifi">
+                        <p class="text-[14px] font-normal">10gb</p>
+                      </div>
+                    </div>
+                  </div>
+                </article>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </section>
+    <!-- latest deal ends -->
+
+    <!-- categories start -->
+    <section class="bg-[#141414] py-[50px]">
+      <div class="max-w-screen-xl mx-auto px-[12px] md:px-[20px] lg:px-[75px]">
+        <div class="flex justify-between items-center mb-[30px]">
+          <header>
+            <h2 class="text-[28px] font-bold text-white">Categories</h2>
+            <p class="text-[#A8A8A8] text-[18px] font-normal">We provide everything</p>
+          </header>
+          <div>
+            <a href="/" class="text-[16px] font-semibold inline-block px-[24px] py-[12px] bg-[#FF9357] rounded-full">Explore</a>
+          </div>
+        </div>
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-[12px] md:gap-[16] lg:gap-[30px]">
+          <div class="rounded-[20px] bg-[#202020] flex items-center gap-[16px] px-[20px] py-[16px]">
+            <div>
+              <img src="./asset/microscope.svg" alt="icon">
+            </div>
+            <div>
+              <h3 class="text-white text-[20px] font-bold">Star Hills</h3>
+              <h4 class="font-normal text-[16px] text-[#A8A8A8]">18,394</h4>
+            </div>
+          </div>
+          <div class="rounded-[20px] bg-[#202020] flex items-center gap-[16px] px-[20px] py-[16px]">
+            <div>
+              <img src="./asset/icons/buildings.svg" alt="icon">
+            </div>
+            <div>
+              <h3 class="text-white text-[20px] font-bold">Apartment</h3>
+              <h4 class="font-normal text-[16px] text-[#A8A8A8]">18,394</h4>
+            </div>
+          </div>
+          <div class="rounded-[20px] bg-[#202020] flex items-center gap-[16px] px-[20px] py-[16px]">
+            <div>
+              <img src="./asset/icons/house-2.svg" alt="icon">
+            </div>
+            <div>
+              <h3 class="text-white text-[20px] font-bold">Nearby City</h3>
+              <h4 class="font-normal text-[16px] text-[#A8A8A8]">18,394</h4>
+            </div>
+          </div>
+          <div class="rounded-[20px] bg-[#202020] flex items-center gap-[16px] px-[20px] py-[16px]">
+            <div>
+              <img src="./asset/icons/building-4.svg" alt="icon">
+            </div>
+            <div>
+              <h3 class="text-white text-[20px] font-bold">Landed House</h3>
+              <h4 class="font-normal text-[16px] text-[#A8A8A8]">18,394</h4>
+            </div>
+          </div>
+          <div class="rounded-[20px] bg-[#202020] flex items-center gap-[16px] px-[20px] py-[16px]">
+            <div>
+              <img src="./asset/icons/airplane.svg" alt="icon">
+            </div>
+            <div>
+              <h3 class="text-white text-[20px] font-bold">Airport</h3>
+              <h4 class="font-normal text-[16px] text-[#A8A8A8]">18,394</h4>
+            </div>
+          </div>
+          <div class="rounded-[20px] bg-[#202020] flex items-center gap-[16px] px-[20px] py-[16px]">
+            <div>
+              <img src="./asset/icons/cup.svg" alt="icon">
+            </div>
+            <div>
+              <h3 class="text-white text-[20px] font-bold">Awards</h3>
+              <h4 class="font-normal text-[16px] text-[#A8A8A8]">18,394</h4>
+            </div>
+          </div>
+          <div class="rounded-[20px] bg-[#202020] flex items-center gap-[16px] px-[20px] py-[16px]">
+            <div>
+              <img src="./asset/icons/sun-fog.svg" alt="icon">
+            </div>
+            <div>
+              <h3 class="text-white text-[20px] font-bold">Sunset</h3>
+              <h4 class="font-normal text-[16px] text-[#A8A8A8]">18,394</h4>
+            </div>
+          </div>
+          <div class="rounded-[20px] bg-[#202020] flex items-center gap-[16px] px-[20px] py-[16px]">
+            <div>
+              <img src="./asset/icons/element-equal.svg" alt="icon">
+            </div>
+            <div>
+              <h3 class="text-white text-[20px] font-bold">Others</h3>
+              <h4 class="font-normal text-[16px] text-[#A8A8A8]">18,394</h4>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- categories ends -->
+
+    <!-- benefite start -->
+    <section class="text-white py-[100px]">
+      <div class="max-w-screen-xl mx-auto px-[12px] md:px-[20px] lg:px-[75px] flex justify-between">
+        <div class="w-[383px] space-y-[30px]">
+          <h2 class="font-bold text-[28px]">Huge Benefits That Make You Feel Happier</h2>
+          <ul class="space-y-[20px]">
+            <li class="flex gap-[12px] items-center">
+              <img src="./asset/icons/tick-circle.svg" alt="">
+              <span class="font-semibold text-[18px]">Checking faster without depositing</span>
+            </li>
+            <li class="flex gap-[12px] items-center">
+              <img src="./asset/icons/tick-circle.svg" alt="">
+              <span class="font-semibold text-[18px]">24/7 security guarding your place</span>
+            </li>
+            <li class="flex gap-[12px] items-center">
+              <img src="./asset/icons/tick-circle.svg" alt="">
+              <span class="font-semibold text-[18px]">Fast-internet access without lagging</span>
+            </li>
+            <li class="flex gap-[12px] items-center">
+              <img src="./asset/icons/tick-circle.svg" alt="">
+              <span class="font-semibold text-[18px]">High standard of layout of houses</span>
+            </li>
+            <li class="flex gap-[12px] items-center">
+              <img src="./asset/icons/tick-circle.svg" alt="">
+              <span class="font-semibold text-[18px]">All other benefits, we promise</span>
+            </li>
+          </ul>
+          <div class="flex items-center gap-x-[14px]">
+            <a href="/" class="flex items-center gap-x-[10px] px-[24px] py-[12px] bg-[#FF9357] text-black rounded-full">
+              <span>
+                <img src="./asset/icons/message-notif.svg" alt="message">
+              </span>
+              <span class="font-semibold text-[18px]">Call Sales</span>
+            </a>
+
+            <a href="/" class="px-[24px] py-[12px] bg-[#323437] rounded-full">
+              <span class="font-semibold text-[18px]">All Benefits</span>
+            </a>
+          </div>
+        </div>
+        <div class="w-[650px] grid grid-cols-2 gap-[30px]">
+          <div class="relative rounded-[24px] overflow-hidden">
+            <img class="object-cover" src="./asset/img/home-2.png" alt="home">
+            <div class="z-10 absolute top-0 left-0 right-0 bottom-0 bg-gradient-to-b from-white/30 from-30% to-black p-[20px] flex items-end">
+              <div class="flex justify-between items-center mb-0 w-full">
+                <h3 class="text-[20px] font-bold max-w-[163px]">House for Office and Living</h3>
+                <div class="flex items-center gap-x-[4px]">
+                  <img src="./asset/profile-white.svg" alt="user">
+                  <p class="text-[14px] font-normal">18,309</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="relative rounded-[24px] overflow-hidden">
+            <img class="object-cover" src="./asset/img/home-2.png" alt="home">
+            <div class="z-10 absolute top-0 left-0 right-0 bottom-0 bg-gradient-to-b from-white/30 from-30% to-black p-[20px] flex items-end">
+              <div class="flex justify-between items-center mb-0 w-full">
+                <h3 class="text-[20px] font-bold max-w-[163px]">House Nearby with Mall</h3>
+                <div class="flex items-center gap-x-[4px]">
+                  <img src="./asset/profile-white.svg" alt="user">
+                  <p class="text-[14px] font-normal">18,309</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="relative rounded-[24px] overflow-hidden">
+            <img class="object-cover" src="./asset/img/home-3.png" alt="home">
+            <div class="z-10 absolute top-0 left-0 right-0 bottom-0 bg-gradient-to-b from-white/30 from-30% to-black p-[20px] flex items-end">
+              <div class="flex justify-between items-center mb-0 w-full">
+                <h3 class="text-[20px] font-bold max-w-[163px]">House Historical Building</h3>
+                <div class="flex items-center gap-x-[4px]">
+                  <img src="./asset/profile-white.svg" alt="user">
+                  <p class="text-[14px] font-normal">18,309</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="relative rounded-[24px] overflow-hidden">
+            <img class="object-cover" src="./asset/img/home-4.png" alt="home">
+            <div class="z-10 absolute top-0 left-0 right-0 bottom-0 bg-gradient-to-b from-white/30 from-30% to-black p-[20px] flex items-end">
+              <div class="flex justify-between items-center mb-0 w-full">
+                <h3 class="text-[20px] font-bold max-w-[163px]">Landed House with Park</h3>
+                <div class="flex items-center gap-x-[4px]">
+                  <img src="./asset/profile-white.svg" alt="user">
+                  <p class="text-[14px] font-normal">18,309</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- benefite ends -->
+
+    <!-- testimonials-start -->
+    <section class="py-[100px]">
+      <div class="max-w-screen-xl mx-auto px-[12px] md:px-[20px] lg:px-[75px]">
+        <header class="text-center mb-[30px]">
+          <h2 class="text-[28px] font-bold text-white">Happy Customers</h2>
+          <p class="text-[#A8A8A8] text-[18px] font-normal">We’d love to come back again soon</p>
+        </header>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-[20px]">
+          <div class="grid gap-[20px]">
+            <div class="px-[20px] py-[16px] rounded-[20px] bg-[#141414] text-white space-y-[20px]">
+              <div class="flex gap-x-[2px]">
+                <img class="block" src="./asset/Star-4.svg" alt="start" />
+                <img class="block" src="./asset/Star-4.svg" alt="start" />
+                <img class="block" src="./asset/Star-4.svg" alt="start" />
+                <img class="block" src="./asset/Star-4.svg" alt="start" />
+              </div>
+              <p class="text-white font-normal text-[18px]">I was not so sure if there was a beautiful bedroom, but it was really great experience.</p>
+              <div class="flex gap-x-[12px]">
+                <div class="size-50 rounded-full overflow-hidden relative before:absolute before:top-0 before:left-0 before:size-full before:content-[''] before:bg-[#d9d9d9]/20 before:z-10">
+                  <img src="./asset/image-5.png" alt="user">
+                </div>
+                <div>
+                  <h3 class="font-semibold text-[16px] text-white">Evelin Bie</h3>
+                  <h4 class="font-normal text-[14px] text-[#A8A8A8]">Full-Time Traveler</h4>
+                </div>
+              </div>
+            </div>
+            <div class="px-[20px] py-[16px] rounded-[20px] bg-[#141414] text-white space-y-[20px]">
+              <div class="flex gap-x-[2px]">
+                <img class="block" src="./asset/Star-4.svg" alt="start" />
+                <img class="block" src="./asset/Star-4.svg" alt="start" />
+                <img class="block" src="./asset/Star-4.svg" alt="start" />
+                <img class="block" src="./asset/Star-4.svg" alt="start" />
+              </div>
+              <p class="text-white font-normal text-[18px]">I was not so sure if there was a beautiful bedroom, but it was really great experience.</p>
+              <div class="flex gap-x-[12px]">
+                <div class="size-50 rounded-full overflow-hidden relative before:absolute before:top-0 before:left-0 before:size-full before:content-[''] before:bg-[#d9d9d9]/20 before:z-10">
+                  <img src="./asset/image-5.png" alt="user">
+                </div>
+                <div>
+                  <h3 class="font-semibold text-[16px] text-white">Evelin Bie</h3>
+                  <h4 class="font-normal text-[14px] text-[#A8A8A8]">Full-Time Traveler</h4>
+                </div>
+              </div>
+            </div>
+            <div class="px-[20px] py-[16px] rounded-[20px] bg-[#141414] text-white space-y-[20px]">
+              <div class="flex gap-x-[2px]">
+                <img class="block" src="./asset/Star-4.svg" alt="start" />
+                <img class="block" src="./asset/Star-4.svg" alt="start" />
+                <img class="block" src="./asset/Star-4.svg" alt="start" />
+                <img class="block" src="./asset/Star-4.svg" alt="start" />
+              </div>
+              <p class="font-normal text-[18px]">I was not so sure if there was a beautiful bedroom, but it was really great experience.</p>
+              <div class="flex gap-x-[12px]">
+                <div class="size-50 rounded-full overflow-hidden relative before:absolute before:top-0 before:left-0 before:size-full before:content-[''] before:bg-[#d9d9d9]/20 before:z-10">
+                  <img src="./asset/image-5.png" alt="user">
+                </div>
+                <div>
+                  <h3 class="font-semibold text-[16px]">Evelin Bie</h3>
+                  <h4 class="font-normal text-[14px] text-[#A8A8A8]">Full-Time Traveler</h4>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="grid gap-[20px]">
+            <div class="px-[20px] py-[16px] rounded-[20px] bg-[#141414] text-white space-y-[20px]">
+              <div class="flex gap-x-[2px]">
+                <img class="block" src="./asset/Star-4.svg" alt="start" />
+                <img class="block" src="./asset/Star-4.svg" alt="start" />
+                <img class="block" src="./asset/Star-4.svg" alt="start" />
+                <img class="block" src="./asset/Star-4.svg" alt="start" />
+              </div>
+              <p class="text-white font-normal text-[18px]">I was not so sure if there was a beautiful bedroom, but it was really great experience.</p>
+              <div class="flex gap-x-[12px]">
+                <div class="size-50 rounded-full overflow-hidden relative before:absolute before:top-0 before:left-0 before:size-full before:content-[''] before:bg-[#d9d9d9]/20 before:z-10">
+                  <img src="./asset/image-5.png" alt="user">
+                </div>
+                <div>
+                  <h3 class="font-semibold text-[16px] text-white">Evelin Bie</h3>
+                  <h4 class="font-normal text-[14px] text-[#A8A8A8]">Full-Time Traveler</h4>
+                </div>
+              </div>
+            </div>
+            <div class="px-[20px] py-[16px] rounded-[20px] bg-[#141414] text-white space-y-[20px]">
+              <div class="flex gap-x-[2px]">
+                <img class="block" src="./asset/Star-4.svg" alt="start" />
+                <img class="block" src="./asset/Star-4.svg" alt="start" />
+                <img class="block" src="./asset/Star-4.svg" alt="start" />
+                <img class="block" src="./asset/Star-4.svg" alt="start" />
+              </div>
+              <p class="text-white font-normal text-[18px]">I was not so sure if there was a beautiful bedroom, but it was really great experience.</p>
+              <div class="flex gap-x-[12px]">
+                <div class="size-50 rounded-full overflow-hidden relative before:absolute before:top-0 before:left-0 before:size-full before:content-[''] before:bg-[#d9d9d9]/20 before:z-10">
+                  <img src="./asset/image-5.png" alt="user">
+                </div>
+                <div>
+                  <h3 class="font-semibold text-[16px] text-white">Evelin Bie</h3>
+                  <h4 class="font-normal text-[14px] text-[#A8A8A8]">Full-Time Traveler</h4>
+                </div>
+              </div>
+            </div>
+            <div class="px-[20px] py-[16px] rounded-[20px] bg-[#141414] text-white space-y-[20px]">
+              <div class="flex gap-x-[2px]">
+                <img class="block" src="./asset/Star-4.svg" alt="start" />
+                <img class="block" src="./asset/Star-4.svg" alt="start" />
+                <img class="block" src="./asset/Star-4.svg" alt="start" />
+                <img class="block" src="./asset/Star-4.svg" alt="start" />
+              </div>
+              <p class="font-normal text-[18px]">I was not so sure if there was a beautiful bedroom, but it was really great experience.</p>
+              <div class="flex gap-x-[12px]">
+                <div class="size-50 rounded-full overflow-hidden relative before:absolute before:top-0 before:left-0 before:size-full before:content-[''] before:bg-[#d9d9d9]/20 before:z-10">
+                  <img src="./asset/image-5.png" alt="user">
+                </div>
+                <div>
+                  <h3 class="font-semibold text-[16px]">Evelin Bie</h3>
+                  <h4 class="font-normal text-[14px] text-[#A8A8A8]">Full-Time Traveler</h4>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="md:col-span-2 lg:col-span-1 lg:grid-cols-1 grid gap-[20px] md:grid-cols-2">
+            <div class="px-[20px] py-[16px] rounded-[20px] bg-[#141414] text-white space-y-[20px]">
+              <div class="flex gap-x-[2px]">
+                <img class="block" src="./asset/Star-4.svg" alt="start" />
+                <img class="block" src="./asset/Star-4.svg" alt="start" />
+                <img class="block" src="./asset/Star-4.svg" alt="start" />
+                <img class="block" src="./asset/Star-4.svg" alt="start" />
+              </div>
+              <p class="text-white font-normal text-[18px]">I was not so sure if there was a beautiful bedroom, but it was really great experience.</p>
+              <div class="flex gap-x-[12px]">
+                <div class="size-50 rounded-full overflow-hidden relative before:absolute before:top-0 before:left-0 before:size-full before:content-[''] before:bg-[#d9d9d9]/20 before:z-10">
+                  <img src="./asset/image-5.png" alt="user">
+                </div>
+                <div>
+                  <h3 class="font-semibold text-[16px] text-white">Evelin Bie</h3>
+                  <h4 class="font-normal text-[14px] text-[#A8A8A8]">Full-Time Traveler</h4>
+                </div>
+              </div>
+            </div>
+            <div class="px-[20px] py-[16px] rounded-[20px] bg-[#141414] text-white space-y-[20px]">
+              <div class="flex gap-x-[2px]">
+                <img class="block" src="./asset/Star-4.svg" alt="start" />
+                <img class="block" src="./asset/Star-4.svg" alt="start" />
+                <img class="block" src="./asset/Star-4.svg" alt="start" />
+                <img class="block" src="./asset/Star-4.svg" alt="start" />
+              </div>
+              <p class="text-white font-normal text-[18px]">I was not so sure if there was a beautiful bedroom, but it was really great experience.</p>
+              <div class="flex gap-x-[12px]">
+                <div class="size-50 rounded-full overflow-hidden relative before:absolute before:top-0 before:left-0 before:size-full before:content-[''] before:bg-[#d9d9d9]/20 before:z-10">
+                  <img src="./asset/image-5.png" alt="user">
+                </div>
+                <div>
+                  <h3 class="font-semibold text-[16px] text-white">Evelin Bie</h3>
+                  <h4 class="font-normal text-[14px] text-[#A8A8A8]">Full-Time Traveler</h4>
+                </div>
+              </div>
+            </div>
+            <div class="px-[20px] py-[16px] rounded-[20px] bg-[#141414] text-white space-y-[20px]">
+              <div class="flex gap-x-[2px]">
+                <img class="block" src="./asset/Star-4.svg" alt="start" />
+                <img class="block" src="./asset/Star-4.svg" alt="start" />
+                <img class="block" src="./asset/Star-4.svg" alt="start" />
+                <img class="block" src="./asset/Star-4.svg" alt="start" />
+              </div>
+              <p class="font-normal text-[18px]">I was not so sure if there was a beautiful bedroom, but it was really great experience.</p>
+              <div class="flex gap-x-[12px]">
+                <div class="size-50 rounded-full overflow-hidden relative before:absolute before:top-0 before:left-0 before:size-full before:content-[''] before:bg-[#d9d9d9]/20 before:z-10">
+                  <img src="./asset/image-5.png" alt="user">
+                </div>
+                <div>
+                  <h3 class="font-semibold text-[16px]">Evelin Bie</h3>
+                  <h4 class="font-normal text-[14px] text-[#A8A8A8]">Full-Time Traveler</h4>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- testimonials-ends -->
+  </main>
+
+
+  <!-- footer start -->
+  <footer class="bg-[#141414] py-[100px]">
+    <div class="max-w-screen-xl mx-auto px-[12px] md:px-[20px] lg:px-[75px]">
+      <div class="flex flex-row flex-wrap lg:flex-nowrap gap-[16px] lg:gap-0 lg:justify-between">
+        <nav class="text-[16px]">
+          <h2 class="font-semibold text-white mb-3">Solutions</h2>
+          <ul class="text-[#A8A8A8] space-y-3">
+            <li><a href="/" class="hover:text-[#FF9357] transition-all">Credit Rewards</a></li>
+            <li><a href="/" class="hover:text-[#FF9357] transition-all">P2P Renting</a></li>
+            <li><a href="/" class="hover:text-[#FF9357] transition-all">Open for Listing</a></li>
+            <li><a href="/" class="hover:text-[#FF9357] transition-all">AI Automation</a></li>
+            <li><a href="/" class="hover:text-[#FF9357] transition-all">APIs Developer</a></li>
+          </ul>
+        </nav>
+        <nav class="text-[16px]">
+          <h2 class="font-semibold text-white mb-3">Product</h2>
+          <ul class="text-[#A8A8A8] space-y-3">
+            <li><a href="/" class="hover:text-[#FF9357] transition-all">Credit Rewards</a></li>
+            <li><a href="/" class="hover:text-[#FF9357] transition-all">P2P Renting</a></li>
+            <li><a href="/" class="hover:text-[#FF9357] transition-all">Open for Listing</a></li>
+            <li><a href="/" class="hover:text-[#FF9357] transition-all">AI Automation</a></li>
+            <li><a href="/" class="hover:text-[#FF9357] transition-all">APIs Developer</a></li>
+          </ul>
+        </nav>
+        <nav class="text-[16px]">
+          <h2 class="font-semibold text-white mb-3">Company</h2>
+          <ul class="text-[#A8A8A8] space-y-3">
+            <li><a href="/" class="hover:text-[#FF9357] transition-all">Credit Rewards</a></li>
+            <li><a href="/" class="hover:text-[#FF9357] transition-all">P2P Renting</a></li>
+            <li><a href="/" class="hover:text-[#FF9357] transition-all">Open for Listing</a></li>
+            <li><a href="/" class="hover:text-[#FF9357] transition-all">AI Automation</a></li>
+            <li><a href="/" class="hover:text-[#FF9357] transition-all">APIs Developer</a></li>
+          </ul>
+        </nav>
+        <div class="space-y-3">
+          <form>
+            <h2 class="font-semibold text-white mb-3">Subscribe & Free Rewards</h2>
+            <div class="max-w-[447px] bg-white rounded-full flex">
+              <div class="relative">
+                <div class="absolute inset-y-0 start-0 flex items-center ps-3.5 pointer-events-none">
+                  <img src="./asset/sms.svg" alt="email">
+                </div>
+                <input type="text" id="input-group-1" class="rounded-l-full ps-10 focus:outline-none block w-full h-full placeholder-[#7D7B91] placeholder-text-[16px]" placeholder="Email Address">
+              </div>
+              <button class="px-[24px] py-[12px] text-[16px] font-semibold bg-[#FF9357] rounded-full" type="submit">Subcribe</button>
+            </div>
+          </form>
+          <div class="">
+            <h3 class="font-semibold text-white mb-3">Choose Language</h3>
+            <!-- test -->
+            <div class="relative inline-block text-left">
+              <div>
+                <button id="menu-button" type="button" class="flex justify-center items-center gap-[10px] text-white ">
+                  <span id="curent-lang" class="flex items-center gap-x-[10px]">
+                    <img src="https://flagcdn.com/w20/us.png" alt="Amerika Serikat" class="w-5 h-5 mr-2"> <span class="font-normal text-[16px]">Inggris</span>
+                  </span>
+                  <svg class="h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                          <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 011.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
+                      </svg>
+                </button>
+              </div>
+
+              <div id="dropdown" class="absolute left-0 z-10 mt-2 w-56 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 hidden" role="menu" aria-orientation="vertical" aria-labelledby="menu-button" tabindex="-1">
+                <div class="py-1" role="none">
+                  <a href="#" class="language-option flex items-center px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" data-lang="Indonesia" data-flag="https://flagcdn.com/w20/id.png">
+                    <img src="https://flagcdn.com/w20/id.png" alt="Indonesia" class="w-5 h-5 mr-2"> Indonesia
+                  </a>
+                  <a href="#" class="language-option flex items-center px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" data-lang="Inggris" data-flag="https://flagcdn.com/w20/us.png">
+                    <img src="https://flagcdn.com/w20/us.png" alt="Amerika Serikat" class="w-5 h-5 mr-2"> Inggris
+                  </a>
+                  <a href="#" class="language-option flex items-center px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" data-lang="Prancis" data-flag="https://flagcdn.com/w20/fr.png">
+                    <img src="https://flagcdn.com/w20/fr.png" alt="Prancis" class="w-5 h-5 mr-2"> Prancis
+                  </a>
+                  <a href="#" class="language-option flex items-center px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" data-lang="Jerman" data-flag="https://flagcdn.com/w20/de.png">
+                    <img src="https://flagcdn.com/w20/de.png" alt="Jerman" class="w-5 h-5 mr-2"> Jerman
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <hr class="border-[#353535] my-[50px]" />
+      <div class="flex justify-between items-center">
+        <img class="block" src="./asset/logo.svg" alt="logo">
+        <p class="text-[#A8A8A8] text-[16px] font-normal">All Rights Reserved Nidejia BuildWithAngga 2024</p>
+      </div>
+    </div>
+  </footer>
+  <!-- footer ends -->
+
+  <!-- custom js -->
+  <script src="./asset/js/main.js"></script>
+
+  <!-- splidejs -->
+  <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      var splide = new Splide('.splide', {
+        type: 'loop',
+        perPage: 4,
+        gap: '30px'
+      });
+      splide.mount();
+    });
+  </script>
+
+</body>
+
+</html>
